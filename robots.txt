@@ -1,0 +1,11 @@
+# robots.txt for pdfed
+# https://pdfed.usaid.dev/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pdfed.usaid.dev/sitemap.xml
+
+# Disallow admin/system paths (none exist but good practice)
+Disallow: /.git/

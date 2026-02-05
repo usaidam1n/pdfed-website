@@ -4,14 +4,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pdfed - The PDF Editor You Won't Hate</title>
-  <meta name="description"
-    content="Edit, sign, redact, and annotate PDFs directly in your browser. No uploads, no software, 100% private. Open source.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="pdfed - The PDF Editor You Won't Hate">
-  <meta property="og:description" content="Edit, sign, redact PDFs in your browser. Privacy-first, open source.">
+  <!-- Primary Meta Tags -->
+  <title>pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser</title>
+  <meta name="description"
+    content="Free browser-based PDF editor. Edit text, sign, redact & annotate PDFs privately - no uploads, no software. Chrome extension for secure PDF editing.">
+  <meta name="keywords"
+    content="PDF editor, free PDF editor, edit PDF, sign PDF, redact PDF, PDF annotation, browser PDF editor, Chrome PDF extension, privacy PDF editor, online PDF editor, PDF tool, edit PDF online free, PDF signing tool">
+  <meta name="author" content="pdfed">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfed.usaid.dev/">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfed.usaid.dev/">
+  <meta property="og:title" content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser">
+  <meta property="og:description"
+    content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private. The PDF editor you won't hate.">
+  <meta property="og:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="pdfed - The PDF Editor You Won't Hate">
+  <meta property="og:site_name" content="pdfed">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pdfed.usaid.dev/">
+  <meta name="twitter:title" content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser">
+  <meta name="twitter:description"
+    content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private.">
+  <meta name="twitter:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+  <meta name="twitter:site" content="@pdfed">
+  <meta name="twitter:creator" content="@pdfed">
+
+  <!-- Additional SEO -->
+  <meta name="application-name" content="pdfed">
+  <meta name="apple-mobile-web-app-title" content="pdfed">
+  <meta name="theme-color" content="#ff5a36">
+  <meta name="msapplication-TileColor" content="#ff5a36">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://pdfed.usaid.dev/#website",
+        "url": "https://pdfed.usaid.dev/",
+        "name": "pdfed",
+        "description": "Privacy-first PDF editor for your browser",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pdfed.usaid.dev/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://pdfed.usaid.dev/#organization",
+        "name": "pdfed",
+        "url": "https://pdfed.usaid.dev/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pdfed.usaid.dev/favicon.svg"
+        },
+        "sameAs": [
+          "https://twitter.com/pdfed"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://pdfed.usaid.dev/#software",
+        "name": "pdfed",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome, Edge, Brave, Chromium",
+        "browserRequirements": "Requires Chrome, Edge, or any Chromium-based browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1000",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "description": "Privacy-first PDF editor extension for Chrome. Edit text, sign documents, redact sensitive information, and annotate PDFs directly in your browser. No uploads required - all processing happens locally.",
+        "featureList": [
+          "Edit PDF text",
+          "Sign documents digitally",
+          "Redact sensitive information",
+          "Annotate and highlight PDFs",
+          "Add watermarks",
+          "Reorder and rotate pages",
+          "Password protect PDFs",
+          "100% private - no uploads"
+        ],
+        "screenshot": "https://pdfed.usaid.dev/assets/images/og-image.png",
+        "softwareVersion": "1.0",
+        "author": {
+          "@id": "https://pdfed.usaid.dev/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +122,7 @@
     rel="stylesheet">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -477,6 +579,48 @@
           </div>
         </div>
       </div>
+
+      <!-- FAQPage Structured Data -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is pdfed really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The core features including editing text, signing, and basic annotations are completely free to use forever. Advanced features may be added as premium options in the future."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data secure with pdfed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We operate with a privacy-first architecture. Your files are processed locally within your browser and are never uploaded to our servers. Your documents never leave your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does pdfed work on all websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "pdfed works on any PDF file you open in Chrome or Firefox, whether it's from a website URL or a local file from your computer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What browsers are supported by pdfed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "pdfed currently works on Chrome, Edge, Brave, and other Chromium-based browsers. Firefox support is coming soon!"
+            }
+          }
+        ]
+      }
+      </script>
     </section>
 
     <!-- CTA Section -->

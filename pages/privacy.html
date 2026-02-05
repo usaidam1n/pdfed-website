@@ -4,14 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - pdfed</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Privacy Policy - pdfed PDF Editor | Your Data Stays Private</title>
   <meta name="description"
-    content="Privacy Policy for pdfed. Learn how we protect your data with our local-first architecture.">
+    content="pdfed Privacy Policy. Learn how we protect your data with local-first processing. Your PDFs never leave your device - 100% private browser-based editing.">
+  <meta name="keywords"
+    content="PDF editor privacy, pdfed privacy policy, private PDF editing, local PDF processing, secure PDF editor">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pdfed.usaid.dev/pages/privacy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfed.usaid.dev/pages/privacy.html">
+  <meta property="og:title" content="Privacy Policy - pdfed PDF Editor">
+  <meta property="og:description"
+    content="Learn how pdfed protects your data with local-first processing. Your PDFs never leave your device.">
+  <meta property="og:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+  <meta property="og:site_name" content="pdfed">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy - pdfed PDF Editor">
+  <meta name="twitter:description" content="Learn how pdfed protects your data with local-first processing.">
+  <meta name="twitter:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+
+  <meta name="theme-color" content="#ff5a36">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
+
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -54,60 +80,149 @@
     </section>
 
     <section class="content-section fade-in-up delay-2">
+
+      <!-- NEW: Quick Summary Box -->
+      <div class="policy-block"
+        style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h2 style="color: #166534; margin-top: 0;">Summary</h2>
+        <ul style="margin-bottom: 0;">
+          <li style="color: black;">✅ Your PDF documents are processed locally and never uploaded to any server</li>
+          <li style="color: black;">✅ We do not collect, store, or have access to your document content</li>
+          <li style="color: black;">✅ No user tracking, analytics, or advertising</li>
+          <!-- <li style="color: black;">✅ Preferences are stored locally on your device only</li> -->
+        </ul>
+      </div>
+
       <div class="policy-block">
         <h2>1. Local Processing Architecture</h2>
         <p><strong>pdfed is different.</strong> Unlike other online PDF editors that require you to upload your
           sensitive documents to their servers, pdfed operates entirely within your web browser.</p>
         <p>This means:</p>
         <ul>
-          <li>Your files <strong>never</strong> leave your device.</li>
+          <li>Your PDF files <strong>never</strong> leave your device.</li>
           <li>We <strong>cannot</strong> see, access, or store your documents.</li>
-          <li>All edits, signatures, and redactions happen locally using WebAssembly and JavaScript technologies.</li>
+          <li>All edits, signatures, and redactions happen locally using JavaScript technologies built into your
+            browser.</li>
         </ul>
       </div>
 
       <div class="policy-block">
-        <h2>2. Data Collection</h2>
-        <p>We do not collect personal usage data, document contents, or metadata. We are a privacy-first tool designed
-          for security-conscious users.</p>
+        <h2>2. Data We Do NOT Collect</h2>
+        <p>We are committed to your privacy. pdfed does <strong>not</strong> collect:</p>
+        <ul>
+          <li>PDF document content, metadata, or filenames</li>
+          <li>Personal information (name, email, address, phone number)</li>
+          <li>Browsing history or activity</li>
+          <li>Device identifiers or fingerprints</li>
+          <li>Location data</li>
+          <li>Usage analytics or statistics</li>
+        </ul>
         <p>We do NOT use:</p>
         <ul>
-          <li>Google Analytics or third-party tracking cookies.</li>
-          <li>Server-side logging of user activity.</li>
-          <li>Ad retargeting pixels.</li>
+          <li>Google Analytics or third-party tracking cookies</li>
+          <li>Server-side logging of user activity</li>
+          <li>Ad retargeting pixels</li>
         </ul>
       </div>
 
       <div class="policy-block">
-        <h2>3. Permissions</h2>
-        <p>The extension requires certain permissions to function, which are strictly used for the intended features:
-        </p>
+        <h2>3. Data We Store Locally</h2>
+        <p>The extension uses your browser's local storage to save user preferences on your device. This data never
+          leaves your device and includes:</p>
         <ul>
-          <li><strong>"Read and change all your data on the websites you visit" (Host Permissions):</strong> This
-            generic warning appears because pdfed needs to inject the toolbar into the PDF viewer tab. We only activate
-            on PDF files.</li>
-          <li><strong>"Storage":</strong> Used to save your local preferences (like favorite stamps or signatures)
-            locally in your browser sync storage.</li>
+          <li>Toolbar position and settings</li>
+          <li>Saved signatures (stored locally only)</li>
+          <li>Custom stamps (stored locally only)</li>
+        </ul>
+        <p>You can clear this data at any time through your browser's extension settings.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>4. Browser Permissions</h2>
+        <p>The extension requires certain permissions to function. Each permission is used solely for the stated
+          purpose:</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+          <thead>
+            <tr style="background: #f9fafb;">
+              <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb; color: black;">Permission
+              </th>
+              <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb; color: black;">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>activeTab</strong></td>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Access the current PDF document for editing
+                when you click the extension icon. Limited to the active tab only.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>scripting</strong></td>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Inject the PDF editing toolbar and tools into
+                the page containing your PDF.</td>
+            </tr>
+            <!-- <tr>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>storage</strong></td>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Save your preferences, signatures, and stamps
+                locally on your device.</td>
+            </tr> -->
+            <tr>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>Host Permissions</strong></td>
+              <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Required to activate on PDF files. The
+                extension only activates on pages displaying PDF documents.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>These permissions are the minimum required to provide PDF editing functionality and do not enable data
+          collection.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>5. Third-Party Services</h2>
+        <p>pdfed is a standalone extension. We do not transmit your PDF documents or personal data to any third-party
+          services.</p>
+        <p><strong>Font Loading:</strong> The extension loads stylized handwriting fonts from Google Fonts for the
+          signature feature. This request only fetches font files (CSS and WOFF2) and does not transmit any document
+          data or personal information. Google may receive your IP address as part of this standard web request. No
+          document content is ever shared.</p>
+        <p>For more information about Google Fonts' data practices, see <a
+            href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">Google Fonts Privacy
+            FAQ</a>.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>6. Data Security</h2>
+        <p>Since pdfed processes all documents locally within your browser:</p>
+        <ul>
+          <li>Your documents benefit from your browser's built-in security sandbox</li>
+          <li>No data is transmitted over the network for processing</li>
+          <li>There are no servers that could be breached to expose your data</li>
+          <li>Files are processed in memory and not written to disk by the extension</li>
         </ul>
       </div>
 
       <div class="policy-block">
-        <h2>4. Third-Party Services</h2>
-        <p>pdfed is a standalone extension. We do not transmit data to third-party APIs for OCR or conversion. All
-          features are built-in and run locally.</p>
+        <h2>7. Children's Privacy</h2>
+        <p>pdfed does not knowingly collect any personal information from anyone, including children under the age of
+          13. Since the extension does not collect personal data from any users, it complies with the Children's Online
+          Privacy Protection Act (COPPA).</p>
       </div>
 
       <div class="policy-block">
-        <h2>5. Updates to this Policy</h2>
+        <h2>8. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. If we make significant changes, we will notify users
-          through the extension update notes.</p>
-        <p><em>Last updated: January 24, 2026</em></p>
+          through the extension update notes in the Chrome Web Store.</p>
+        <p>We encourage you to review this page periodically for the latest information on our privacy practices.</p>
+      </div>
+
+      <div class="policy-block">
+        <p><strong>Effective Date:</strong> January 24, 2026</p>
+        <p><strong>Last Updated:</strong> February 5, 2026</p>
       </div>
 
       <div class="policy-block">
         <h2>Contact Us</h2>
-        <p>If you have any questions about our privacy practices, please email us at <a
-            href="mailto:pdfed@usaid.dev">pdfed@usaid.dev</a>.</p>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:pdfed@usaid.dev">pdfed@usaid.dev</a></p>
       </div>
     </section>
   </main>
