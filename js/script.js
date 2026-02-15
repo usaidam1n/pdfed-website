@@ -196,23 +196,23 @@ document.addEventListener('DOMContentLoaded', () => {
     heroTitle.style.backgroundSize = '200% auto';
   }
 
-  // 9. Smooth reveal for browser mockup
-  const browserMockup = document.querySelector('.browser-mockup');
-  if (browserMockup) {
-    const mockupObserver = new IntersectionObserver((entries) => {
+  // 9. Smooth reveal for hero image
+  const heroVisual = document.querySelector('.hero-visual');
+  if (heroVisual) {
+    const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0) scale(1)';
-          mockupObserver.unobserve(entry.target);
+          heroObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
     
-    browserMockup.style.opacity = '0';
-    browserMockup.style.transform = 'translateY(40px) scale(0.98)';
-    browserMockup.style.transition = 'opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-    mockupObserver.observe(browserMockup);
+    heroVisual.style.opacity = '0';
+    heroVisual.style.transform = 'translateY(40px) scale(0.98)';
+    heroVisual.style.transition = 'opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+    heroObserver.observe(heroVisual);
   }
 
   // 10. Handle window resize - close mobile menu on desktop

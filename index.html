@@ -86,13 +86,6 @@
           "price": "0",
           "priceCurrency": "USD"
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "ratingCount": "1000",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
         "description": "Privacy-first PDF editor extension for Chrome. Edit text, sign documents, redact sensitive information, and annotate PDFs directly in your browser. No uploads required - all processing happens locally.",
         "featureList": [
           "Edit PDF text",
@@ -130,7 +123,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">
+      <a href="#hero" class="logo">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
           <path d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z" fill="white"
@@ -152,7 +145,7 @@
         <a href="#testimonials">Reviews</a>
       </div>
 
-      <a href="https://chrome.google.com/webstore/detail/your-extension-id" class="btn btn-primary btn-sm">
+      <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-sm">
         Add to Chrome
       </a>
 
@@ -176,14 +169,14 @@
       <a href="#how-it-works">How it works</a>
       <a href="#testimonials">Reviews</a>
     </nav>
-    <a href="https://chrome.google.com/webstore/detail/your-extension-id" class="btn btn-primary btn-lg mobile-cta">
+    <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg mobile-cta">
       Add to Chrome — Free
     </a>
   </div>
 
   <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container hero-container">
         <!-- Badge -->
         <div class="hero-badge fade-in-up">
@@ -205,7 +198,7 @@
 
         <!-- CTA Buttons -->
         <div class="hero-actions fade-in-up delay-3">
-          <a href="https://chrome.google.com/webstore/detail/your-extension-id" class="btn btn-primary btn-lg">
+          <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
               <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -218,12 +211,6 @@
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
             </svg>
             Firefox — Coming Soon
-          </a>
-          <a href="#demo" class="btn btn-secondary btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-            Watch Demo
           </a>
         </div>
 
@@ -250,23 +237,13 @@
           </div>
         </div>
 
-        <!-- Browser Mockup -->
+        <!-- Hero image -->
         <div class="hero-visual fade-in-up delay-5">
-          <div class="browser-mockup">
-            <div class="browser-header">
-              <div class="browser-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <div class="browser-bar">pdfed.com/editor</div>
-            </div>
-            <div class="browser-content">
-              <img src="assets/screenshot-toolbar.png" alt="pdfed interface" class="app-screenshot"
-                onerror="this.style.display='none'">
-            </div>
+          <div class="hero-image-wrap">
+            <img src="assets/images/pdfed.png" alt="pdfed interface" class="hero-image">
+          </div>
 
-            <!-- Floating Cards -->
+          <!-- Floating Cards -->
             <div class="float-card card-1">
               <div class="icon-box blue">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -291,6 +268,45 @@
                 <span class="float-sub">Permanent & Private</span>
               </div>
             </div>
+
+
+            <div class="float-card card-4">
+              <div class="icon-box purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div class="float-text">
+                <span class="float-title">No sign-up</span>
+                <span class="float-sub">Start in seconds</span>
+              </div>
+            </div>
+
+            <div class="float-card card-5">
+              <div class="icon-box orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <div class="float-text">
+                <span class="float-title">100% Free</span>
+                <span class="float-sub">No credit card required</span>
+              </div>
+            </div>
+
+            <div class="float-card card-6">
+              <div class="icon-box blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0110 0v4" />
+                </svg>
+              </div>
+              <div class="float-text">
+                <span class="float-title">Private</span>
+                <span class="float-sub">Files stay on device</span>
+              </div>
           </div>
         </div>
       </div>
@@ -434,28 +450,6 @@
             <div class="step-number">03</div>
             <h3>Start Editing</h3>
             <p>Use the powerful toolbar to make changes and save instantly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section id="demo" class="demo-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Demo</span>
-          <h2 class="section-title">See it in action</h2>
-          <p class="section-subtitle">Watch how quickly you can edit and sign documents with pdfed.</p>
-        </div>
-
-        <div class="demo-container fade-in-up">
-          <div class="video-placeholder">
-            <div class="play-button">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p>Watch Demo Video (1:24)</p>
           </div>
         </div>
       </div>
@@ -629,7 +623,7 @@
         <div class="cta-card">
           <h2>Ready to transform your workflow?</h2>
           <p>Join thousands of users who have switched to pdfed for their PDF needs.</p>
-          <a href="https://chrome.google.com/webstore/detail/your-extension-id" class="btn btn-primary btn-lg">
+          <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg">
             Add to Chrome — It's Free
           </a>
           <p class="cta-sub">No credit card required • Instant access • 100% Private</p>
@@ -679,7 +673,6 @@
         <div class="link-col">
           <h4>Resources</h4>
           <a href="#how-it-works">Getting Started</a>
-          <a href="#demo">Demo</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="link-col">

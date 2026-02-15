@@ -525,7 +525,7 @@ a {
   color: var(--text-primary);
 }
 
-/* Browser Mockup */
+/* Hero image */
 .hero-visual {
   position: relative;
   width: 100%;
@@ -533,77 +533,19 @@ a {
   margin-top: 40px;
 }
 
-.browser-mockup {
+.hero-image-wrap {
   position: relative;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-medium);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    0 40px 80px -20px rgba(0, 0, 0, 0.6),
-    0 0 100px rgba(255, 90, 54, 0.1);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
 }
 
-.browser-header {
-  height: 48px;
-  background: var(--bg-tertiary);
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  position: relative;
-}
-
-.browser-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dot.red {
-  background: #ff5f57;
-}
-
-.dot.yellow {
-  background: #ffbd2e;
-}
-
-.dot.green {
-  background: #28c940;
-}
-
-.browser-bar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--bg-primary);
-  padding: 6px 80px;
-  border-radius: 8px;
-  font-size: 12px;
-  color: var(--text-tertiary);
-  border: 1px solid var(--border-subtle);
-}
-
-.browser-content {
-  aspect-ratio: 16/9;
-  background: var(--bg-tertiary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.app-screenshot {
+.hero-image {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  vertical-align: middle;
 }
 
 /* Floating Feature Cards */
@@ -628,7 +570,7 @@ a {
 
 .card-1 {
   top: 15%;
-  right: -30px;
+  right: 16px;
   animation-delay: 0s;
 }
 
@@ -636,6 +578,30 @@ a {
   bottom: 20%;
   left: -30px;
   animation-delay: 1s;
+}
+
+.card-3 {
+  top: 45%;
+  right: -20px;
+  animation-delay: 0.5s;
+}
+
+.card-4 {
+  bottom: 45%;
+  left: -25px;
+  animation-delay: 1.5s;
+}
+
+.card-5 {
+  top: 8%;
+  left: calc(50% - 90px);
+  animation-delay: 0.3s;
+}
+
+.card-6 {
+  bottom: 12%;
+  right: 15%;
+  animation-delay: 2s;
 }
 
 .icon-box {
@@ -927,71 +893,6 @@ a {
   color: var(--text-secondary);
   max-width: 220px;
   margin: 0 auto;
-}
-
-/* =========================================
-   DEMO SECTION
-   ========================================= */
-.demo-section {
-  padding: var(--section-padding) 0;
-  background: var(--bg-primary);
-}
-
-.demo-container {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 24px;
-  overflow: hidden;
-  position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-lg), 0 0 80px rgba(255, 90, 54, 0.1);
-}
-
-.video-placeholder {
-  aspect-ratio: 16/9;
-  background: var(--bg-tertiary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition-base);
-}
-
-.video-placeholder:hover {
-  background: var(--bg-card-hover);
-}
-
-.play-button {
-  width: 88px;
-  height: 88px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 32px rgba(255, 90, 54, 0.4);
-  color: #000;
-  transition: var(--transition-base);
-}
-
-.play-button svg {
-  width: 32px;
-  height: 32px;
-  margin-left: 4px;
-}
-
-.video-placeholder:hover .play-button {
-  transform: scale(1.1);
-  box-shadow: 0 12px 40px rgba(255, 90, 54, 0.5);
-}
-
-.video-placeholder p {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 16px;
 }
 
 /* =========================================
@@ -1503,23 +1404,8 @@ footer {
     margin-top: 24px;
   }
 
-  .browser-mockup {
+  .hero-image-wrap {
     border-radius: 12px;
-  }
-
-  .browser-header {
-    height: 36px;
-    padding: 0 12px;
-  }
-
-  .browser-dots .dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .browser-bar {
-    font-size: 10px;
-    padding: 4px 40px;
   }
 
   /* Metrics */
@@ -1626,30 +1512,6 @@ footer {
   .step-item p {
     font-size: 14px;
     max-width: 280px;
-  }
-
-  /* Demo */
-  .demo-section {
-    padding: 60px 0;
-  }
-
-  .demo-container {
-    border-radius: 16px;
-    margin: 0;
-  }
-
-  .play-button {
-    width: 64px;
-    height: 64px;
-  }
-
-  .play-button svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .video-placeholder p {
-    font-size: 14px;
   }
 
   /* Testimonials */
