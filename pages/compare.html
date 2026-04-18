@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>pdfed vs Smallpdf, iLovePDF & Adobe - Browser PDF Editor Comparison</title>
+  <meta name="description"
+    content="Honest comparison: pdfed vs Smallpdf, iLovePDF, Adobe Acrobat Online, and Xodo. See which browser PDF editor is free, which uploads your files, and which runs 100% locally.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://pdfed.usaid.dev/pages/compare.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pdfed.usaid.dev/pages/compare.html">
+  <meta property="og:title" content="pdfed vs Smallpdf, iLovePDF & Adobe - PDF Editor Comparison">
+  <meta property="og:description"
+    content="Honest, side-by-side comparison of the top browser PDF editors. Which one uploads your files? Which is actually free? Read before you install.">
+  <meta property="og:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+  <meta property="og:site_name" content="pdfed">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="pdfed vs Smallpdf, iLovePDF & Adobe">
+  <meta name="twitter:description"
+    content="Honest comparison of the top browser PDF editors. Which one uploads your files? Which is actually free?">
+  <meta name="twitter:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
+
+  <meta name="theme-color" content="#ff5a36">
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pdfed.usaid.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Compare PDF Editors",
+        "item": "https://pdfed.usaid.dev/pages/compare.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "pdfed vs Smallpdf, iLovePDF & Adobe: Browser PDF Editor Comparison",
+    "description": "An honest comparison of the leading browser-based PDF editors, focused on architecture (local vs cloud), pricing model, and who each tool is best for.",
+    "author": {
+      "@type": "Organization",
+      "name": "pdfed",
+      "url": "https://pdfed.usaid.dev/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "pdfed",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pdfed.usaid.dev/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pdfed.usaid.dev/pages/compare.html"
+    }
+  }
+  </script>
+
+  <!-- Fonts (async) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Page-specific styles (scoped to compare page) -->
+  <style>
+    .cmp-wrap {
+      max-width: 1080px;
+      margin: 0 auto 120px;
+      padding: 0 24px;
+    }
+
+    .cmp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: rgba(255, 90, 54, 0.08);
+      border: 1px solid rgba(255, 90, 54, 0.25);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffb199;
+      margin-bottom: 20px;
+    }
+
+    .cmp-eyebrow .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      box-shadow: 0 0 10px var(--accent-primary);
+    }
+
+    /* Section wrapper with soft glow */
+    .cmp-section {
+      position: relative;
+      margin-bottom: 56px;
+    }
+
+    .cmp-section > h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .cmp-section > p.lede {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    /* Takeaway cards grid */
+    .takeaway-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .takeaway {
+      position: relative;
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      transition: var(--transition-base);
+    }
+
+    .takeaway:hover {
+      border-color: rgba(255, 138, 101, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .takeaway.highlight {
+      border-color: rgba(255, 90, 54, 0.35);
+      background:
+        radial-gradient(120% 120% at 0% 0%, rgba(255, 90, 54, 0.14), transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+    }
+
+    .takeaway .tk-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 90, 54, 0.12);
+      color: var(--accent-secondary);
+      margin-bottom: 14px;
+    }
+
+    .takeaway.muted .tk-icon {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+    }
+
+    .takeaway h3 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .takeaway p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Local vs cloud split */
+    .split-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .split-card {
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split-card.cloud {
+      background:
+        radial-gradient(80% 100% at 50% 0%, rgba(96, 165, 250, 0.08), transparent 60%),
+        var(--bg-card);
+    }
+
+    .split-card.local {
+      background:
+        radial-gradient(80% 100% at 50% 0%, rgba(255, 90, 54, 0.12), transparent 60%),
+        var(--bg-card);
+      border-color: rgba(255, 90, 54, 0.25);
+    }
+
+    .split-card .sc-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .split-card.cloud .sc-label { color: #7ca9ee; }
+    .split-card.local .sc-label { color: #ffa48c; }
+
+    .split-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .split-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .split-card li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      padding: 8px 0;
+    }
+
+    .split-card li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .split-card.cloud li svg { color: #7ca9ee; opacity: 0.85; }
+    .split-card.local li svg { color: var(--accent-secondary); }
+
+    /* Comparison table */
+    .cmp-table-wrap {
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+
+    .cmp-table-scroll { overflow-x: auto; }
+
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      font-size: 14.5px;
+    }
+
+    .cmp-table thead th {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      text-align: left;
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cmp-table tbody td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+    }
+
+    .cmp-table tbody tr:last-child td { border-bottom: none; }
+
+    .cmp-table .tool {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .cmp-table tr.row-pdfed td {
+      background: rgba(255, 90, 54, 0.06);
+      position: relative;
+    }
+    .cmp-table tr.row-pdfed td:first-child {
+      box-shadow: inset 3px 0 0 var(--accent-primary);
+    }
+    .cmp-table tr.row-pdfed .tool { color: var(--accent-secondary); }
+
+    .pill-yes, .pill-no, .pill-neutral {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .pill-yes { background: rgba(34, 197, 94, 0.12); color: #86efac; border: 1px solid rgba(34, 197, 94, 0.2); }
+    .pill-no  { background: rgba(239, 68, 68, 0.10); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.2); }
+    .pill-neutral { background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); border: 1px solid var(--border-subtle); }
+
+    /* VS cards */
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .vs-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px;
+      transition: var(--transition-base);
+      position: relative;
+    }
+
+    .vs-card:hover {
+      border-color: var(--border-medium);
+    }
+
+    .vs-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 24px; right: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 90, 54, 0.5), transparent);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+
+    .vs-card:hover::before { opacity: 1; }
+
+    .vs-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .vs-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--text-primary);
+    }
+
+    .vs-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      color: var(--text-secondary);
+    }
+
+    .vs-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .vs-diff {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 16px 0 18px;
+    }
+
+    .vs-diff-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .vs-diff-row .label {
+      color: var(--text-tertiary);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .vs-diff-row .body {
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .vs-picks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .vs-pick {
+      padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .vs-pick.ours {
+      border-color: rgba(255, 90, 54, 0.3);
+      background: rgba(255, 90, 54, 0.06);
+    }
+
+    .vs-pick .pick-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 6px;
+    }
+
+    .vs-pick.ours .pick-label { color: var(--accent-secondary); }
+
+    .vs-pick p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    /* Decision chips */
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .decision-chip {
+      display: flex;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      transition: var(--transition-base);
+    }
+
+    .decision-chip:hover {
+      border-color: rgba(255, 138, 101, 0.3);
+      background: var(--bg-card-hover);
+    }
+
+    .decision-chip .dc-ico {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255, 90, 54, 0.12);
+      color: var(--accent-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .decision-chip .dc-text {
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .decision-chip .dc-text strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .decision-chip .dc-answer {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(255, 90, 54, 0.12);
+      border: 1px solid rgba(255, 90, 54, 0.25);
+      color: #ffb199;
+      border-radius: 999px;
+    }
+
+    .decision-chip .dc-answer.alt {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      padding: 22px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+    }
+
+    .faq-item h3 {
+      font-family: var(--font-display);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* CTA block */
+    .cmp-cta {
+      position: relative;
+      text-align: center;
+      padding: 60px 32px;
+      border-radius: 24px;
+      overflow: hidden;
+      background:
+        radial-gradient(80% 100% at 50% 0%, rgba(255, 90, 54, 0.18), transparent 65%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 90, 54, 0.25);
+    }
+
+    .cmp-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.4vw, 36px);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .cmp-cta p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+
+    .cmp-cta .btn { box-shadow: 0 10px 30px rgba(255, 90, 54, 0.25); }
+
+    /* Fairness */
+    .fairness {
+      margin-top: 40px;
+      padding: 20px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--border-subtle);
+      border-radius: 14px;
+      font-size: 13.5px;
+      color: var(--text-tertiary);
+      line-height: 1.6;
+    }
+
+    .fairness strong { color: var(--text-secondary); }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .split-cards { grid-template-columns: 1fr; }
+      .vs-picks { grid-template-columns: 1fr; }
+      .vs-diff-row { grid-template-columns: 1fr; gap: 4px; }
+      .cmp-cta { padding: 48px 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+          <path d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z" fill="white"
+            fill-opacity="0.95" />
+          <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+              <stop offset="0%" stop-color="#ff5a36" />
+              <stop offset="100%" stop-color="#ff8a65" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">pdfed</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#how-it-works">How it works</a>
+        <a href="../index.html#testimonials">Reviews</a>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" rel="noopener" class="btn btn-primary btn-sm">Add to
+        Chrome</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <div class="cmp-eyebrow fade-in-up"><span class="dot"></span> Honest Comparison</div>
+        <h1 class="page-title fade-in-up">pdfed vs Smallpdf, iLovePDF &amp; the rest</h1>
+        <p class="page-subtitle fade-in-up delay-1">An architecture-first comparison. No affiliate links, no paid
+          placements, no dunking on competitors. Just the stuff that actually matters when you&rsquo;re picking a PDF tool.</p>
+      </div>
+    </section>
+
+    <div class="cmp-wrap">
+
+      <!-- TL;DR -->
+      <div class="cmp-section fade-in-up delay-2">
+        <h2>TL;DR</h2>
+        <p class="lede">Four things to know before you read the rest.</p>
+        <div class="takeaway-grid">
+          <div class="takeaway muted">
+            <div class="tk-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.26A8 8 0 1 0 3 16.25"/><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Most big PDF tools are cloud services</h3>
+            <p>Smallpdf, iLovePDF, Adobe Acrobat Online — you upload, their server edits, you download.</p>
+          </div>
+          <div class="takeaway highlight">
+            <div class="tk-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>pdfed is different architecturally</h3>
+            <p>Every edit runs locally in your browser. Your file never leaves your device.</p>
+          </div>
+          <div class="takeaway muted">
+            <div class="tk-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3>Sensitive docs? Check architecture first</h3>
+            <p>Contracts, medical, legal, tax, HR — the upload-vs-local question matters more than feature lists.</p>
+          </div>
+          <div class="takeaway muted">
+            <div class="tk-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>Need deep enterprise features?</h3>
+            <p>Adobe Acrobat still wins on certified redaction, OCR depth, and compliance workflows.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why it matters -->
+      <div class="cmp-section">
+        <h2>Why &ldquo;local vs. cloud&rdquo; is the question that matters</h2>
+        <p class="lede">Most browser-based PDF editors are thin UIs on top of a cloud service. That architecture is
+          fine for a lot of use cases — but it has real consequences.</p>
+
+        <div class="split-cards">
+          <div class="split-card cloud">
+            <div class="sc-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              Cloud tools
+            </div>
+            <h3>Your file travels to a server</h3>
+            <ul>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                File uploaded, processed, sent back. They hold it during that window.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                You rely on their retention policy. Policies change, companies get acquired.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                Offline? Bad wifi? No editing.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Per-edit server cost is why free tiers exist — with daily caps and paywalls.
+              </li>
+            </ul>
+          </div>
+
+          <div class="split-card local">
+            <div class="sc-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              pdfed (local)
+            </div>
+            <h3>Your browser does the work</h3>
+            <ul>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                The editing engine ships inside the extension. No server to upload to.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No retention policy question — we never received your file in the first place.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Works offline. If your browser is open, pdfed works.
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No per-edit cost = core features can stay free without caps.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="cmp-section">
+        <h2>Side-by-side architecture comparison</h2>
+        <p class="lede">The facts that don&rsquo;t change often. Specific features and pricing tiers shift — always check
+          the vendor&rsquo;s current site for those.</p>
+        <div class="cmp-table-wrap">
+          <div class="cmp-table-scroll">
+            <table class="cmp-table">
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Processing</th>
+                  <th>Files uploaded?</th>
+                  <th>Business model</th>
+                  <th>Works offline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-pdfed">
+                  <td class="tool">pdfed</td>
+                  <td>Local (in-browser)</td>
+                  <td><span class="pill-no">No</span></td>
+                  <td>Free (core features)</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="tool">Smallpdf</td>
+                  <td>Cloud</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                  <td>Freemium (Pro tier)</td>
+                  <td><span class="pill-no">No</span></td>
+                </tr>
+                <tr>
+                  <td class="tool">iLovePDF</td>
+                  <td>Cloud</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                  <td>Freemium (Premium tier)</td>
+                  <td><span class="pill-no">No</span></td>
+                </tr>
+                <tr>
+                  <td class="tool">Adobe Acrobat Online</td>
+                  <td>Cloud</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                  <td>Freemium (Acrobat Pro)</td>
+                  <td><span class="pill-neutral">Partial (desktop app)</span></td>
+                </tr>
+                <tr>
+                  <td class="tool">Xodo</td>
+                  <td>Mostly cloud</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                  <td>Free + paid tiers</td>
+                  <td><span class="pill-no">No (web)</span></td>
+                </tr>
+                <tr>
+                  <td class="tool">PDFescape</td>
+                  <td>Cloud</td>
+                  <td><span class="pill-yes">Yes</span></td>
+                  <td>Freemium (Premium tier)</td>
+                  <td><span class="pill-no">No (web)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VS cards -->
+      <div class="cmp-section">
+        <h2>Head-to-head breakdowns</h2>
+        <p class="lede">Five quick comparisons, each ending with a simple &ldquo;pick this if&rdquo; guide.</p>
+
+        <div class="vs-grid">
+
+          <!-- pdfed vs Smallpdf -->
+          <article class="vs-card">
+            <div class="vs-head">
+              <span class="vs-logo">pdfed</span>
+              <span class="vs-badge">VS</span>
+              <span class="vs-logo">Smallpdf</span>
+            </div>
+            <p><strong style="color:var(--text-primary)">Smallpdf</strong> is one of the most polished PDF web apps out there — clean UI, huge feature catalog
+              (compress, convert, eSign, OCR), mature browser extension.</p>
+            <div class="vs-diff">
+              <div class="vs-diff-row"><span class="label">Processing</span><span class="body">Smallpdf uploads to a server. pdfed edits in your browser.</span></div>
+              <div class="vs-diff-row"><span class="label">Pricing</span><span class="body">Smallpdf free tier has daily task limits. pdfed has no per-day caps.</span></div>
+              <div class="vs-diff-row"><span class="label">Breadth</span><span class="body">Smallpdf wins on OCR, bulk conversion, and eSign workflows.</span></div>
+            </div>
+            <div class="vs-picks">
+              <div class="vs-pick">
+                <div class="pick-label">Pick Smallpdf if</div>
+                <p>You need OCR on scanned docs, heavy format conversion, or a shared eSign workflow.</p>
+              </div>
+              <div class="vs-pick ours">
+                <div class="pick-label">Pick pdfed if</div>
+                <p>Your PDFs contain anything you wouldn&rsquo;t want on someone else&rsquo;s server.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- pdfed vs iLovePDF -->
+          <article class="vs-card">
+            <div class="vs-head">
+              <span class="vs-logo">pdfed</span>
+              <span class="vs-badge">VS</span>
+              <span class="vs-logo">iLovePDF</span>
+            </div>
+            <p><strong style="color:var(--text-primary)">iLovePDF</strong> is a polished cloud toolkit with deep features, a browser extension, and mobile/desktop
+              apps. Strong on conversion, merging, splitting, compression.</p>
+            <div class="vs-diff">
+              <div class="vs-diff-row"><span class="label">Processing</span><span class="body">iLovePDF uploads to a server to process. pdfed doesn&rsquo;t.</span></div>
+              <div class="vs-diff-row"><span class="label">Offline</span><span class="body">iLovePDF needs connectivity. pdfed works offline.</span></div>
+              <div class="vs-diff-row"><span class="label">Flow</span><span class="body">iLovePDF is one tool per task. pdfed edits the PDF already in your tab.</span></div>
+            </div>
+            <div class="vs-picks">
+              <div class="vs-pick">
+                <div class="pick-label">Pick iLovePDF if</div>
+                <p>You do batch operations across many files or need cross-device mobile apps.</p>
+              </div>
+              <div class="vs-pick ours">
+                <div class="pick-label">Pick pdfed if</div>
+                <p>You&rsquo;re looking at a PDF and need to change a thing right now — without uploading it.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- pdfed vs Adobe -->
+          <article class="vs-card">
+            <div class="vs-head">
+              <span class="vs-logo">pdfed</span>
+              <span class="vs-badge">VS</span>
+              <span class="vs-logo">Adobe Acrobat</span>
+            </div>
+            <p><strong style="color:var(--text-primary)">Adobe Acrobat</strong> is the reference implementation of PDF tooling — they invented the format. For
+              certified redaction, Bates numbering, and deep OCR, Adobe is still the standard.</p>
+            <div class="vs-diff">
+              <div class="vs-diff-row"><span class="label">Price</span><span class="body">Adobe&rsquo;s real product is the Pro subscription. pdfed is free.</span></div>
+              <div class="vs-diff-row"><span class="label">Processing</span><span class="body">Adobe&rsquo;s online tools are cloud-based. pdfed is local.</span></div>
+              <div class="vs-diff-row"><span class="label">Scope</span><span class="body">Adobe is a platform. pdfed is a focused single-purpose editor.</span></div>
+            </div>
+            <div class="vs-picks">
+              <div class="vs-pick">
+                <div class="pick-label">Pick Adobe if</div>
+                <p>You work in legal, compliance, or enterprise publishing and need certified features.</p>
+              </div>
+              <div class="vs-pick ours">
+                <div class="pick-label">Pick pdfed if</div>
+                <p>You want 90% of common PDF tasks solved in-browser, for free, with no upload.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- pdfed vs Xodo -->
+          <article class="vs-card">
+            <div class="vs-head">
+              <span class="vs-logo">pdfed</span>
+              <span class="vs-badge">VS</span>
+              <span class="vs-logo">Xodo</span>
+            </div>
+            <p><strong style="color:var(--text-primary)">Xodo</strong> is a well-regarded PDF viewer/editor owned by Apryse. It has strong desktop and mobile
+              clients, annotation features, and cloud sync.</p>
+            <div class="vs-diff">
+              <div class="vs-diff-row"><span class="label">Flow</span><span class="body">pdfed opens on whatever PDF is in your tab. Xodo is a standalone editor you visit.</span></div>
+              <div class="vs-diff-row"><span class="label">Account</span><span class="body">pdfed has no sign-in. Xodo&rsquo;s cloud sync needs an account.</span></div>
+              <div class="vs-diff-row"><span class="label">Privacy</span><span class="body">Xodo is solid but cloud-sync-friendly. pdfed has nowhere to sync to.</span></div>
+            </div>
+            <div class="vs-picks">
+              <div class="vs-pick">
+                <div class="pick-label">Pick Xodo if</div>
+                <p>You want cross-device annotation sync and a serious mobile editing app.</p>
+              </div>
+              <div class="vs-pick ours">
+                <div class="pick-label">Pick pdfed if</div>
+                <p>You don&rsquo;t want another account and don&rsquo;t need cross-device sync.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- pdfed vs PDFescape -->
+          <article class="vs-card">
+            <div class="vs-head">
+              <span class="vs-logo">pdfed</span>
+              <span class="vs-badge">VS</span>
+              <span class="vs-logo">PDFescape</span>
+            </div>
+            <p><strong style="color:var(--text-primary)">PDFescape</strong> has been around for years as a free online PDF editor. It works without installing
+              anything, but runs fully in the cloud with a freemium Premium tier.</p>
+            <div class="vs-diff">
+              <div class="vs-diff-row"><span class="label">Processing</span><span class="body">PDFescape is cloud-hosted. pdfed runs 100% locally.</span></div>
+              <div class="vs-diff-row"><span class="label">UI</span><span class="body">PDFescape&rsquo;s interface is dated. pdfed is built around a modern browser flow.</span></div>
+              <div class="vs-diff-row"><span class="label">Limits</span><span class="body">PDFescape free tier caps page count and file size. pdfed doesn&rsquo;t.</span></div>
+            </div>
+            <div class="vs-picks">
+              <div class="vs-pick">
+                <div class="pick-label">Pick PDFescape if</div>
+                <p>You want a zero-install web editor and don&rsquo;t mind dated UX or the upload step.</p>
+              </div>
+              <div class="vs-pick ours">
+                <div class="pick-label">Pick pdfed if</div>
+                <p>You want a modern, no-upload editor with no page or size limits.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Decision guide -->
+      <div class="cmp-section">
+        <h2>Quick decision guide</h2>
+        <p class="lede">Match your situation to a recommendation in under 10 seconds.</p>
+        <div class="decision-grid">
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="dc-text">
+              I handle contracts, tax docs, medical records, or anything confidential.
+              <br><span class="dc-answer">Use pdfed</span> <span class="dc-answer alt">or Acrobat desktop</span>
+            </div>
+          </div>
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <div class="dc-text">
+              I edit PDFs offline on flights, trains, or bad wifi.
+              <br><span class="dc-answer">Use pdfed</span>
+            </div>
+          </div>
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="dc-text">
+              I need OCR on scanned documents.
+              <br><span class="dc-answer alt">Use Adobe Acrobat</span> <span class="dc-answer alt">or Smallpdf</span>
+            </div>
+          </div>
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <div class="dc-text">
+              I need to batch-convert 50 files.
+              <br><span class="dc-answer alt">Use iLovePDF</span> <span class="dc-answer alt">or Smallpdf</span>
+            </div>
+          </div>
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+            </div>
+            <div class="dc-text">
+              I want free, in-browser editing with no signup and no upload.
+              <br><span class="dc-answer">Use pdfed</span>
+            </div>
+          </div>
+
+          <div class="decision-chip">
+            <div class="dc-ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div class="dc-text">
+              I need e-signature workflows with external signers.
+              <br><span class="dc-answer alt">Use Adobe Sign</span> <span class="dc-answer alt">or DocuSign</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="cmp-section">
+        <h2>FAQ</h2>
+        <p class="lede">Questions people actually ask before switching tools.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Does pdfed do everything the bigger tools do?</h3>
+            <p>No. pdfed is focused on in-browser editing, signing, redaction, and annotation. It doesn&rsquo;t try to
+              replace enterprise features like certified redaction, advanced OCR, or multi-party e-signature workflows.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is cloud processing inherently bad?</h3>
+            <p>No. For non-sensitive documents, cloud tools are fine and often more featureful. The question is: do
+              you know what&rsquo;s getting uploaded, and do you care? For sensitive files, caring is the correct default.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does pdfed have a paid tier?</h3>
+            <p>Core features are free. Advanced features may be added as premium options later; existing free features
+              will remain free.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I verify pdfed doesn&rsquo;t upload my files?</h3>
+            <p>Open DevTools &rarr; Network tab &rarr; start editing a PDF. You&rsquo;ll see no outbound request
+              carrying the document. You can also read the extension&rsquo;s requested permissions in the Chrome Web Store listing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cmp-cta fade-in-up">
+        <h2>Try pdfed on your next PDF</h2>
+        <p>Free, no signup, and your files stay on your device.</p>
+        <a href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" rel="noopener"
+          class="btn btn-primary btn-lg">Add to Chrome — Free</a>
+      </div>
+
+      <!-- Fairness note -->
+      <div class="fairness">
+        <p><strong>Fairness note:</strong> Smallpdf, iLovePDF, Adobe Acrobat, Xodo, and PDFescape are real products
+          built by real teams, and several of them do things pdfed doesn&rsquo;t attempt. This page sticks to
+          architectural differences (local vs cloud, free vs freemium) that don&rsquo;t change often. Specific feature
+          availability, pricing tiers, and free-tier limits change — always check the vendor&rsquo;s current website
+          before choosing. All product names and trademarks are the property of their respective owners.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="../index.html" class="logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#footerGrad)" />
+            <path d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z" fill="white"
+              fill-opacity="0.95" />
+            <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
+            <defs>
+              <linearGradient id="footerGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#ff5a36" />
+                <stop offset="100%" stop-color="#ff8a65" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">pdfed</span>
+        </a>
+        <p>The privacy-first PDF editor for the modern web.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-col">
+          <h4>Product</h4>
+          <a href="../index.html#features">Features</a>
+          <a href="compare.html">Compare</a>
+        </div>
+        <div class="link-col">
+          <h4>Legal</h4>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© 2026 pdfed. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

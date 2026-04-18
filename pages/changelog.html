@@ -9,7 +9,6 @@
   <title>Changelog - pdfed PDF Editor Updates & New Features</title>
   <meta name="description"
     content="See what's new in pdfed PDF editor. Latest updates, new features, bug fixes and improvements. We ship improvements weekly.">
-  <meta name="keywords" content="pdfed changelog, PDF editor updates, pdfed new features, PDF editor release notes">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pdfed.usaid.dev/pages/changelog.html">
 
@@ -29,12 +28,39 @@
 
   <meta name="theme-color" content="#ff5a36">
 
-  <!-- Fonts -->
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pdfed.usaid.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Changelog",
+        "item": "https://pdfed.usaid.dev/pages/changelog.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts (async) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+  </noscript>
 
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/styles.css">
@@ -63,7 +89,7 @@
         <a href="../index.html#how-it-works">How it works</a>
         <a href="../index.html#testimonials">Reviews</a>
       </div>
-      <a href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-sm">Add to
+      <a href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" rel="noopener" class="btn btn-primary btn-sm">Add to
         Chrome</a>
     </div>
   </nav>
@@ -133,6 +159,7 @@
         <div class="link-col">
           <h4>Product</h4>
           <a href="../index.html#features">Features</a>
+          <a href="compare.html">Compare</a>
           <a href="changelog.html">Changelog</a>
         </div>
       </div>

@@ -1,253 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>pdfed - Free Browser PDF Editor | Edit, Sign & Redact PDFs</title>
+    <meta
+      name="description"
+      content="Free browser-based PDF editor. Edit text, sign, redact and annotate PDFs privately - no uploads, no software. Chrome extension for secure PDF editing."
+    />
+    <meta name="author" content="pdfed" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://pdfed.usaid.dev/" />
 
-  <!-- Primary Meta Tags -->
-  <title>pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser</title>
-  <meta name="description"
-    content="Free browser-based PDF editor. Edit text, sign, redact & annotate PDFs privately - no uploads, no software. Chrome extension for secure PDF editing.">
-  <meta name="keywords"
-    content="PDF editor, free PDF editor, edit PDF, sign PDF, redact PDF, PDF annotation, browser PDF editor, Chrome PDF extension, privacy PDF editor, online PDF editor, PDF tool, edit PDF online free, PDF signing tool">
-  <meta name="author" content="pdfed">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://pdfed.usaid.dev/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pdfed.usaid.dev/" />
+    <meta
+      property="og:title"
+      content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser"
+    />
+    <meta
+      property="og:description"
+      content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private. The PDF editor you won't hate."
+    />
+    <meta
+      property="og:image"
+      content="https://pdfed.usaid.dev/assets/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="pdfed - The PDF Editor You Won't Hate"
+    />
+    <meta property="og:site_name" content="pdfed" />
+    <meta property="og:locale" content="en_US" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pdfed.usaid.dev/">
-  <meta property="og:title" content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser">
-  <meta property="og:description"
-    content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private. The PDF editor you won't hate.">
-  <meta property="og:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="pdfed - The PDF Editor You Won't Hate">
-  <meta property="og:site_name" content="pdfed">
-  <meta property="og:locale" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pdfed.usaid.dev/" />
+    <meta
+      name="twitter:title"
+      content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser"
+    />
+    <meta
+      name="twitter:description"
+      content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pdfed.usaid.dev/assets/images/og-image.png"
+    />
+    <meta name="twitter:site" content="@pdfed" />
+    <meta name="twitter:creator" content="@pdfed" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://pdfed.usaid.dev/">
-  <meta name="twitter:title" content="pdfed - Free PDF Editor | Edit, Sign & Redact PDFs in Browser">
-  <meta name="twitter:description"
-    content="Edit, sign, redact & annotate PDFs directly in your browser. No uploads, 100% private.">
-  <meta name="twitter:image" content="https://pdfed.usaid.dev/assets/images/og-image.png">
-  <meta name="twitter:site" content="@pdfed">
-  <meta name="twitter:creator" content="@pdfed">
+    <!-- Additional SEO -->
+    <meta name="application-name" content="pdfed" />
+    <meta name="apple-mobile-web-app-title" content="pdfed" />
+    <meta name="theme-color" content="#ff5a36" />
+    <meta name="msapplication-TileColor" content="#ff5a36" />
 
-  <!-- Additional SEO -->
-  <meta name="application-name" content="pdfed">
-  <meta name="apple-mobile-web-app-title" content="pdfed">
-  <meta name="theme-color" content="#ff5a36">
-  <meta name="msapplication-TileColor" content="#ff5a36">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
       {
-        "@type": "WebSite",
-        "@id": "https://pdfed.usaid.dev/#website",
-        "url": "https://pdfed.usaid.dev/",
-        "name": "pdfed",
-        "description": "Privacy-first PDF editor for your browser",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://pdfed.usaid.dev/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://pdfed.usaid.dev/#organization",
-        "name": "pdfed",
-        "url": "https://pdfed.usaid.dev/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://pdfed.usaid.dev/favicon.svg"
-        },
-        "sameAs": [
-          "https://twitter.com/pdfed"
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://pdfed.usaid.dev/#website",
+            "url": "https://pdfed.usaid.dev/",
+            "name": "pdfed",
+            "description": "Privacy-first PDF editor for your browser",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://pdfed.usaid.dev/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://pdfed.usaid.dev/#organization",
+            "name": "pdfed",
+            "url": "https://pdfed.usaid.dev/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pdfed.usaid.dev/favicon.svg"
+            },
+            "sameAs": ["https://twitter.com/pdfed"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pdfed.usaid.dev/#software",
+            "name": "pdfed",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome, Edge, Brave, Chromium",
+            "browserRequirements": "Requires Chrome, Edge, or any Chromium-based browser",
+            "url": "https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            "description": "Privacy-first PDF editor extension for Chrome. Edit text, sign documents, redact sensitive information, and annotate PDFs directly in your browser. No uploads required - all processing happens locally.",
+            "featureList": [
+              "Edit PDF text",
+              "Sign documents digitally",
+              "Redact sensitive information",
+              "Annotate and highlight PDFs",
+              "Add watermarks",
+              "Reorder and rotate pages",
+              "Password protect PDFs",
+              "100% private - no uploads"
+            ],
+            "screenshot": "https://pdfed.usaid.dev/assets/images/og-image.png",
+            "softwareVersion": "1.0",
+            "author": {
+              "@id": "https://pdfed.usaid.dev/#organization"
+            }
+          }
         ]
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://pdfed.usaid.dev/#software",
-        "name": "pdfed",
-        "applicationCategory": "BrowserApplication",
-        "operatingSystem": "Chrome, Edge, Brave, Chromium",
-        "browserRequirements": "Requires Chrome, Edge, or any Chromium-based browser",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "Privacy-first PDF editor extension for Chrome. Edit text, sign documents, redact sensitive information, and annotate PDFs directly in your browser. No uploads required - all processing happens locally.",
-        "featureList": [
-          "Edit PDF text",
-          "Sign documents digitally",
-          "Redact sensitive information",
-          "Annotate and highlight PDFs",
-          "Add watermarks",
-          "Reorder and rotate pages",
-          "Password protect PDFs",
-          "100% private - no uploads"
-        ],
-        "screenshot": "https://pdfed.usaid.dev/assets/images/og-image.png",
-        "softwareVersion": "1.0",
-        "author": {
-          "@id": "https://pdfed.usaid.dev/#organization"
-        }
       }
-    ]
-  }
-  </script>
+    </script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
+    <!-- Preload LCP hero image (responsive) -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/pdfed-1600.webp"
+      imagesrcset="assets/images/pdfed-800.webp 800w, assets/images/pdfed-1600.webp 1600w"
+      imagesizes="(max-width: 768px) 100vw, 1200px"
+      fetchpriority="high"
+    />
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+    <!-- Fonts (async to avoid render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
-          <path d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z" fill="white"
-            fill-opacity="0.95" />
-          <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
-          <defs>
-            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
-              <stop offset="0%" stop-color="#ff5a36" />
-              <stop offset="100%" stop-color="#ff8a65" />
-            </linearGradient>
-          </defs>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="logo">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path
+              d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z"
+              fill="white"
+              fill-opacity="0.95"
+            />
+            <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#ff5a36" />
+                <stop offset="100%" stop-color="#ff8a65" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">pdfed</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#testimonials">Reviews</a>
+        </div>
+
+        <a
+          href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc"
+          rel="noopener"
+          class="btn btn-primary btn-sm"
+        >
+          Add to Chrome
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <button class="mobile-close-btn" aria-label="Close menu">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M18 6L6 18M6 6l12 12" />
         </svg>
-        <span class="logo-text">pdfed</span>
-      </a>
-
-      <div class="nav-links">
+      </button>
+      <nav class="mobile-nav-links">
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
         <a href="#testimonials">Reviews</a>
-      </div>
-
-      <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-sm">
-        Add to Chrome
+      </nav>
+      <a
+        href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc"
+        rel="noopener"
+        class="btn btn-primary btn-lg mobile-cta"
+      >
+        Add to Chrome — Free
       </a>
-
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" id="mobileMenu">
-    <button class="mobile-close-btn" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 6L6 18M6 6l12 12" />
-      </svg>
-    </button>
-    <nav class="mobile-nav-links">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#testimonials">Reviews</a>
-    </nav>
-    <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg mobile-cta">
-      Add to Chrome — Free
-    </a>
-  </div>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="container hero-container">
-        <!-- Badge -->
-        <div class="hero-badge fade-in-up">
-          <span class="badge-dot"></span>
-          <span class="badge-text">Privacy-First PDF Editor</span>
-        </div>
-
-        <!-- Title -->
-        <h1 class="hero-title fade-in-up delay-1">
-          The PDF Editor<br>
-          <span class="highlight">You Won't Hate.</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="hero-subtitle fade-in-up delay-2">
-          Edit, sign, watermark, and redact PDFs without leaving your browser.<br>
-          No uploads. No software. 100% private.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="hero-actions fade-in-up delay-3">
-          <a href="https://chrome.google.com/webstore/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-              <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            Add to Chrome — Free
-          </a>
-          <a href="#" class="btn btn-secondary btn-lg" style="opacity: 0.7; cursor: default;" onclick="return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-            </svg>
-            Firefox — Coming Soon
-          </a>
-        </div>
-
-        <!-- Social Proof Stats -->
-        <div class="hero-stats fade-in-up delay-4">
-          <div class="stat-item">
-            <span class="stat-icon">🛡️</span>
-            <span class="stat-value">Secure</span>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container hero-container">
+          <!-- Badge -->
+          <div class="hero-badge fade-in-up">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Privacy-First PDF Editor</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-icon">⭐</span>
+
+          <!-- Title -->
+          <h1 class="hero-title fade-in-up delay-1">
+            The PDF Editor<br />
+            <span class="highlight">You Won't Hate.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle fade-in-up delay-2">
+            Edit, sign, watermark, and redact PDFs without leaving your
+            browser.<br />
+            No uploads. No software. 100% private.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-actions fade-in-up delay-3">
+            <a
+              href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc"
+              rel="noopener"
+              class="btn btn-primary btn-lg"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 8v8M8 12h8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Add to Chrome — Free
+            </a>
+            <a
+              href="#"
+              class="btn btn-secondary btn-lg"
+              style="opacity: 0.7; cursor: default"
+              onclick="return false;"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+              Firefox — Coming Soon
+            </a>
+          </div>
+
+          <!-- Social Proof Stats -->
+          <div class="hero-stats fade-in-up delay-4">
+            <div class="stat-item">
+              <span class="stat-icon">🛡️</span>
+              <span class="stat-value">Secure</span>
+            </div>
+            <div class="stat-item">
+              <!--<span class="stat-icon">⭐</span>
             <span>Loved by</span>
-            <span class="stat-value">1,000+</span>
-            <span>users</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-icon">🔒</span>
-            <span class="stat-value">100% Private</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-icon">☁️</span>
-            <span class="stat-value">Zero</span>
-            <span>uploads</span>
-          </div>
-        </div>
-
-        <!-- Hero image -->
-        <div class="hero-visual fade-in-up delay-5">
-          <div class="hero-image-wrap">
-            <img src="assets/images/pdfed.png" alt="pdfed interface" class="hero-image">
+            <span class="stat-value">10,000+</span>
+            <span>users</span>-->
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🔒</span>
+              <span class="stat-value">100% Private</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">☁️</span>
+              <span class="stat-value">Zero</span>
+              <span>uploads</span>
+            </div>
           </div>
 
-          <!-- Floating Cards -->
+          <!-- Hero image -->
+          <div class="hero-visual fade-in-up delay-5">
+            <div class="hero-image-wrap">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/images/pdfed-800.webp   800w,
+                    assets/images/pdfed-1600.webp 1600w
+                  "
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                />
+                <img
+                  src="assets/images/pdfed-1600.png"
+                  srcset="
+                    assets/images/pdfed-800.png   800w,
+                    assets/images/pdfed-1600.png 1600w
+                  "
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  width="1600"
+                  height="986"
+                  alt="pdfed PDF editor interface showing text editing, signing, and redaction tools running inside a Chrome browser"
+                  class="hero-image"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+
+            <!-- Floating Cards -->
             <div class="float-card card-1">
               <div class="icon-box blue">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"
+                  />
                 </svg>
               </div>
               <div class="float-text">
@@ -258,7 +384,14 @@
 
             <div class="float-card card-2">
               <div class="icon-box red">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                   <path d="M7 11V7a5 5 0 0110 0v4" />
                 </svg>
@@ -269,10 +402,16 @@
               </div>
             </div>
 
-
             <div class="float-card card-4">
               <div class="icon-box purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
@@ -284,7 +423,14 @@
 
             <div class="float-card card-5">
               <div class="icon-box orange">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
                   <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
@@ -298,7 +444,14 @@
 
             <div class="float-card card-6">
               <div class="icon-box blue">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                   <path d="M7 11V7a5 5 0 0110 0v4" />
                 </svg>
@@ -307,388 +460,539 @@
                 <span class="float-title">Private</span>
                 <span class="float-sub">Files stay on device</span>
               </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Metrics Section -->
-    <section class="metrics-section">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-item fade-in-up">
-            <div class="metric-value" data-count="10000">10K+</div>
-            <div class="metric-label">Downloads</div>
-          </div>
-          <div class="metric-item fade-in-up delay-1">
-            <div class="metric-value">100%</div>
-            <div class="metric-label">Private & Local</div>
-          </div>
-          <div class="metric-item fade-in-up delay-2">
-            <div class="metric-value">0</div>
-            <div class="metric-label">Server Uploads</div>
-          </div>
-          <div class="metric-item fade-in-up delay-3">
-            <div class="metric-value">5★</div>
-            <div class="metric-label">User Rating</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section - Bento Grid -->
-    <section id="features" class="features">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Features</span>
-          <h2 class="section-title">Everything you need to master PDFs</h2>
-          <p class="section-subtitle">Powerful features wrapped in a stunning, intuitive interface. All running locally
-            in your browser.</p>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Featured Card: Edit -->
-          <div class="feature-card featured fade-in-up">
-            <div class="feature-icon icon-edit">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
-                <path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
-              </svg>
             </div>
-            <h3>Edit Text</h3>
-            <p>Modify existing text and fix typos directly in the PDF.</p>
-          </div>
-
-          <!-- Featured Card: Redact -->
-          <div class="feature-card fade-in-up delay-1">
-            <div class="feature-icon icon-redact">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 21v-3M12 6V3M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5" />
-              </svg>
-            </div>
-            <h3>Secure Redaction</h3>
-            <p>Permanently remove sensitive information. Pattern fills and smart detection keep your data safe.</p>
-          </div>
-
-          <!-- Card: Pages -->
-          <div class="feature-card fade-in-up delay-2">
-            <div class="feature-icon icon-pages">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-              </svg>
-            </div>
-            <h3>Smart Page Organizer</h3>
-            <p>Drag, drop, rotate, and reorder pages with visual grid view. Merge and split with ease.</p>
-          </div>
-
-          <!-- Card: Sign -->
-          <div class="feature-card fade-in-up delay-3">
-            <div class="feature-icon icon-sign">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4" />
-                <polyline points="10 17 15 12 10 7" />
-                <line x1="15" y1="12" x2="3" y2="12" />
-              </svg>
-            </div>
-            <h3>Sign & Stamp</h3>
-            <p>Create and save signatures. Apply custom stamps or choose from our professional library.</p>
-          </div>
-
-          <!-- Card: Security -->
-          <div class="feature-card fade-in-up delay-4">
-            <div class="feature-icon icon-security">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0110 0v4" />
-              </svg>
-            </div>
-            <h3>Bank-Grade Security</h3>
-            <p>Add passwords, restrict printing, and encrypt documents with AES-256 standard encryption.</p>
-          </div>
-
-          <!-- Card: Watermark -->
-          <div class="feature-card fade-in-up delay-5">
-            <div class="feature-icon icon-watermark">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
-            <h3>Watermarks & Headers</h3>
-            <p>Protect your IP with custom watermarks. Add professional headers, footers, and page numbers.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="steps">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Getting Started</span>
-          <h2 class="section-title">As easy as 1, 2, 3</h2>
-          <p class="section-subtitle">No learning curve. Just instant productivity.</p>
-        </div>
-
-        <div class="steps-container">
-          <div class="step-item fade-in-up">
-            <div class="step-number">01</div>
-            <h3>Add to Browser</h3>
-            <p>Install the lightweight extension from the web store in seconds.</p>
-          </div>
-
-          <div class="step-item fade-in-up delay-1">
-            <div class="step-number">02</div>
-            <h3>Open Any PDF</h3>
-            <p>Click the extension icon on any PDF you're viewing in your browser.</p>
-          </div>
-
-          <div class="step-item fade-in-up delay-2">
-            <div class="step-number">03</div>
-            <h3>Start Editing</h3>
-            <p>Use the powerful toolbar to make changes and save instantly.</p>
+      <!-- Metrics Section -->
+      <section class="metrics-section">
+        <div class="container">
+          <div class="metrics-grid">
+            <!--<div class="metric-item fade-in-up">
+              <div class="metric-value" data-count="10000">10K+</div>
+              <div class="metric-label">Downloads</div>
+            </div>-->
+            <div class="metric-item fade-in-up delay-1">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Private & Local</div>
+            </div>
+            <div class="metric-item fade-in-up delay-2">
+              <div class="metric-value">0</div>
+              <div class="metric-label">Server Uploads</div>
+            </div>
+            <div class="metric-item fade-in-up delay-3">
+              <div class="metric-value">5★</div>
+              <div class="metric-label">User Rating</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Testimonials</span>
-          <h2 class="section-title">Loved by productive people</h2>
-          <p class="section-subtitle">Join thousands of happy users who trust pdfed for their PDF workflows.</p>
+      <!-- Features Section - Bento Grid -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Features</span>
+            <h2 class="section-title">Everything you need to master PDFs</h2>
+            <p class="section-subtitle">
+              Powerful features wrapped in a stunning, intuitive interface. All
+              running locally in your browser.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <!-- Featured Card: Edit -->
+            <div class="feature-card featured fade-in-up">
+              <div class="feature-icon icon-edit">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"
+                  />
+                  <path
+                    d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"
+                  />
+                </svg>
+              </div>
+              <h3>Edit Text</h3>
+              <p>Modify existing text and fix typos directly in the PDF.</p>
+            </div>
+
+            <!-- Featured Card: Redact -->
+            <div class="feature-card fade-in-up delay-1">
+              <div class="feature-icon icon-redact">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 21v-3M12 6V3M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5"
+                  />
+                </svg>
+              </div>
+              <h3>Secure Redaction</h3>
+              <p>
+                Permanently remove sensitive information. Pattern fills and
+                smart detection keep your data safe.
+              </p>
+            </div>
+
+            <!-- Card: Pages -->
+            <div class="feature-card fade-in-up delay-2">
+              <div class="feature-icon icon-pages">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+              <h3>Smart Page Organizer</h3>
+              <p>
+                Drag, drop, rotate, and reorder pages with visual grid view.
+                Merge and split with ease.
+              </p>
+            </div>
+
+            <!-- Card: Sign -->
+            <div class="feature-card fade-in-up delay-3">
+              <div class="feature-icon icon-sign">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4" />
+                  <polyline points="10 17 15 12 10 7" />
+                  <line x1="15" y1="12" x2="3" y2="12" />
+                </svg>
+              </div>
+              <h3>Sign & Stamp</h3>
+              <p>
+                Create and save signatures. Apply custom stamps or choose from
+                our professional library.
+              </p>
+            </div>
+
+            <!-- Card: Security -->
+            <div class="feature-card fade-in-up delay-4">
+              <div class="feature-icon icon-security">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0110 0v4" />
+                </svg>
+              </div>
+              <h3>Bank-Grade Security</h3>
+              <p>
+                Add passwords, restrict printing, and encrypt documents with
+                AES-256 standard encryption.
+              </p>
+            </div>
+
+            <!-- Card: Watermark -->
+            <div class="feature-card fade-in-up delay-5">
+              <div class="feature-icon icon-watermark">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Watermarks & Headers</h3>
+              <p>
+                Protect your IP with custom watermarks. Add professional
+                headers, footers, and page numbers.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="testimonials-grid">
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Finally, a PDF editor that doesn't feel like software from 1995. It's beautiful,
-              fast, and does exactly what I need right in Chrome."</p>
-            <div class="reviewer">
-              <div class="avatar blue">JD</div>
-              <div class="reviewer-info">
-                <span class="name">James D.</span>
-                <span class="role">Product Manager</span>
+      <!-- How It Works -->
+      <section id="how-it-works" class="steps">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Getting Started</span>
+            <h2 class="section-title">As easy as 1, 2, 3</h2>
+            <p class="section-subtitle">
+              No learning curve. Just instant productivity.
+            </p>
+          </div>
+
+          <div class="steps-container">
+            <div class="step-item fade-in-up">
+              <div class="step-number">01</div>
+              <h3>Add to Browser</h3>
+              <p>
+                Install the lightweight extension from the web store in seconds.
+              </p>
+            </div>
+
+            <div class="step-item fade-in-up delay-1">
+              <div class="step-number">02</div>
+              <h3>Open Any PDF</h3>
+              <p>
+                Click the extension icon on any PDF you're viewing in your
+                browser.
+              </p>
+            </div>
+
+            <div class="step-item fade-in-up delay-2">
+              <div class="step-number">03</div>
+              <h3>Start Editing</h3>
+              <p>
+                Use the powerful toolbar to make changes and save instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">Loved by productive people</h2>
+            <p class="section-subtitle">
+              Join thousands of happy users who trust pdfed for their PDF
+              workflows.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card fade-in-up">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                "Finally, a PDF editor that doesn't feel like software from
+                1995. It's beautiful, fast, and does exactly what I need right
+                in Chrome."
+              </p>
+              <div class="reviewer">
+                <div class="avatar blue">JD</div>
+                <div class="reviewer-info">
+                  <span class="name">James D.</span>
+                  <span class="role">Product Manager</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card fade-in-up delay-1">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                "The redaction tool is a lifesaver. I used to have to print and
+                scan documents to hide info. Now it takes 2 seconds."
+              </p>
+              <div class="reviewer">
+                <div class="avatar green">SR</div>
+                <div class="reviewer-info">
+                  <span class="name">Sarah R.</span>
+                  <span class="role">Legal Assistant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card fade-in-up delay-2">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                "Super smooth signature feature. I sign contracts daily and this
+                has saved me so much time. Highly recommend!"
+              </p>
+              <div class="reviewer">
+                <div class="avatar purple">MK</div>
+                <div class="reviewer-info">
+                  <span class="name">Mike K.</span>
+                  <span class="role">Freelancer</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="testimonial-card fade-in-up delay-1">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"The redaction tool is a lifesaver. I used to have to print and scan documents to
-              hide info. Now it takes 2 seconds."</p>
-            <div class="reviewer">
-              <div class="avatar green">SR</div>
-              <div class="reviewer-info">
-                <span class="name">Sarah R.</span>
-                <span class="role">Legal Assistant</span>
+      <!-- FAQ Section -->
+      <section id="faq" class="faq-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">FAQ</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is it really free?</span>
+                <svg
+                  class="chevron"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! The core features including editing text, signing, and
+                  basic annotations are completely free to use forever. Advanced
+                  features may be added as premium options in the future.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is my data secure?</span>
+                <svg
+                  class="chevron"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. We operate with a privacy-first architecture. Your
+                  files are processed locally within your browser and are never
+                  uploaded to our servers. Your documents never leave your
+                  device.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Does it work on all websites?</span>
+                <svg
+                  class="chevron"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  pdfed works on any PDF file you open in Chrome or Firefox,
+                  whether it's from a website URL or a local file from your
+                  computer.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What browsers are supported?</span>
+                <svg
+                  class="chevron"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  pdfed currently works on Chrome, Edge, Brave, and other
+                  Chromium-based browsers. Firefox support is coming soon!
+                </p>
               </div>
             </div>
           </div>
-
-          <div class="testimonial-card fade-in-up delay-2">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Super smooth signature feature. I sign contracts daily and this has saved me so much
-              time. Highly recommend!"</p>
-            <div class="reviewer">
-              <div class="avatar purple">MK</div>
-              <div class="reviewer-info">
-                <span class="name">Mike K.</span>
-                <span class="role">Freelancer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">FAQ</span>
-          <h2 class="section-title">Frequently Asked Questions</h2>
         </div>
 
-        <div class="faq-grid">
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Is it really free?</span>
-              <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </div>
-            <div class="faq-answer">
-              <p>Yes! The core features including editing text, signing, and basic annotations are completely free to
-                use forever. Advanced features may be added as premium options in the future.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Is my data secure?</span>
-              <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </div>
-            <div class="faq-answer">
-              <p>Absolutely. We operate with a privacy-first architecture. Your files are processed locally within your
-                browser and are never uploaded to our servers. Your documents never leave your device.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Does it work on all websites?</span>
-              <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </div>
-            <div class="faq-answer">
-              <p>pdfed works on any PDF file you open in Chrome or Firefox, whether it's from a website URL or a local
-                file from your computer.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>What browsers are supported?</span>
-              <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </div>
-            <div class="faq-answer">
-              <p>pdfed currently works on Chrome, Edge, Brave, and other Chromium-based browsers. Firefox support is
-                coming soon!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQPage Structured Data -->
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        <!-- FAQPage Structured Data -->
+        <script type="application/ld+json">
           {
-            "@type": "Question",
-            "name": "Is pdfed really free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! The core features including editing text, signing, and basic annotations are completely free to use forever. Advanced features may be added as premium options in the future."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my data secure with pdfed?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We operate with a privacy-first architecture. Your files are processed locally within your browser and are never uploaded to our servers. Your documents never leave your device."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does pdfed work on all websites?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "pdfed works on any PDF file you open in Chrome or Firefox, whether it's from a website URL or a local file from your computer."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What browsers are supported by pdfed?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "pdfed currently works on Chrome, Edge, Brave, and other Chromium-based browsers. Firefox support is coming soon!"
-            }
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is it really free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! The core features including editing text, signing, and basic annotations are completely free to use forever. Advanced features may be added as premium options in the future."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my data secure?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. We operate with a privacy-first architecture. Your files are processed locally within your browser and are never uploaded to our servers. Your documents never leave your device."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it work on all websites?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "pdfed works on any PDF file you open in Chrome or Firefox, whether it's from a website URL or a local file from your computer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What browsers are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "pdfed currently works on Chrome, Edge, Brave, and other Chromium-based browsers. Firefox support is coming soon!"
+                }
+              }
+            ]
           }
-        ]
-      }
-      </script>
-    </section>
+        </script>
+      </section>
 
-    <!-- CTA Section -->
-    <section id="cta" class="cta-section">
-      <div class="container">
-        <div class="cta-card">
-          <h2>Ready to transform your workflow?</h2>
-          <p>Join thousands of users who have switched to pdfed for their PDF needs.</p>
-          <a href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc" class="btn btn-primary btn-lg">
-            Add to Chrome — It's Free
-          </a>
-          <p class="cta-sub">No credit card required • Instant access • 100% Private</p>
+      <!-- CTA Section -->
+      <section id="cta" class="cta-section">
+        <div class="container">
+          <div class="cta-card">
+            <h2>Ready to transform your workflow?</h2>
+            <p>
+              Join thousands of users who have switched to pdfed for their PDF
+              needs.
+            </p>
+            <a
+              href="https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc"
+              rel="noopener"
+              class="btn btn-primary btn-lg"
+            >
+              Add to Chrome — It's Free
+            </a>
+            <p class="cta-sub">
+              No credit card required • Instant access • 100% Private
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-col">
-        <a href="#" class="logo">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="url(#footerGrad)" />
-            <path d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z" fill="white"
-              fill-opacity="0.95" />
-            <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
-            <defs>
-              <linearGradient id="footerGrad" x1="0" y1="0" x2="32" y2="32">
-                <stop offset="0%" stop-color="#ff5a36" />
-                <stop offset="100%" stop-color="#ff8a65" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <span class="logo-text">pdfed</span>
-        </a>
-        <p>The privacy-first PDF editor for the modern web. Local-first and free.</p>
-
-        <div class="footer-social">
-          <a href="https://twitter.com/pdfed" aria-label="Twitter">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-col">
+          <a href="#hero" class="logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="url(#footerGrad)" />
               <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                d="M10 10H18C20.2091 10 22 11.7909 22 14V14C22 16.2091 20.2091 18 18 18H10V10Z"
+                fill="white"
+                fill-opacity="0.95"
+              />
+              <path d="M10 18H16V22H10V18Z" fill="white" fill-opacity="0.95" />
+              <defs>
+                <linearGradient id="footerGrad" x1="0" y1="0" x2="32" y2="32">
+                  <stop offset="0%" stop-color="#ff5a36" />
+                  <stop offset="100%" stop-color="#ff8a65" />
+                </linearGradient>
+              </defs>
             </svg>
+            <span class="logo-text">pdfed</span>
           </a>
+          <p>
+            The privacy-first PDF editor for the modern web. Local-first and
+            free.
+          </p>
+
+          <div class="footer-social">
+            <a
+              href="https://twitter.com/pdfed"
+              aria-label="Twitter"
+              rel="noopener"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="link-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="pages/compare.html">Compare</a>
+            <!-- <a href="pages/changelog.html">Changelog</a> -->
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="link-col">
+            <h4>Resources</h4>
+            <a href="#how-it-works">Getting Started</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="link-col">
+            <h4>Legal</h4>
+            <a href="pages/privacy.html">Privacy Policy</a>
+            <a href="pages/support.html">Support</a>
+          </div>
         </div>
       </div>
 
-      <div class="footer-links">
-        <div class="link-col">
-          <h4>Product</h4>
-          <a href="#features">Features</a>
-          <!-- <a href="pages/changelog.html">Changelog</a> -->
-          <a href="#faq">FAQ</a>
-        </div>
-        <div class="link-col">
-          <h4>Resources</h4>
-          <a href="#how-it-works">Getting Started</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        <div class="link-col">
-          <h4>Legal</h4>
-          <a href="pages/privacy.html">Privacy Policy</a>
-          <a href="pages/support.html">Support</a>
-        </div>
+      <div class="container copyright">
+        <p>© 2026 pdfed. All rights reserved. Built with ❤️ for privacy.</p>
       </div>
-    </div>
+    </footer>
 
-    <div class="container copyright">
-      <p>© 2026 pdfed. All rights reserved. Built with ❤️ for privacy.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

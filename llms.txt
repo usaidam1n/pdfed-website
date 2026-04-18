@@ -1,0 +1,42 @@
+# pdfed
+
+> pdfed is a free, privacy-first PDF editor that runs entirely inside the browser as a Chrome/Chromium extension. Users can edit text, sign, redact, annotate, watermark, reorder pages, and password-protect PDFs without uploading files to any server.
+
+pdfed processes every PDF locally in the browser. Files never leave the user's device. There is no account, no upload, no server-side storage, and no tracking. The extension works on Chrome, Edge, Brave, and other Chromium-based browsers. Firefox support is in progress.
+
+## Core facts
+
+- Name: pdfed
+- Category: Browser extension / PDF editor
+- Price: Free
+- Platform: Chrome, Edge, Brave, Chromium-based browsers
+- Chrome Web Store: https://chromewebstore.google.com/detail/kmhiokflfghidbdjfjkbbjkpacijajpc
+- Website: https://pdfed.usaid.dev/
+- Contact: pdfed@usaid.dev
+
+## Key features
+
+- Edit existing PDF text in place
+- Add signatures and stamps (saved locally)
+- Permanent redaction (destroys underlying content, not just a black box)
+- Annotations: highlight, comment, sticky notes, freehand drawing, shapes
+- Page management: reorder, rotate, delete, merge, split
+- Password protection and AES-256 encryption
+- Custom watermarks, headers, footers, page numbers
+- 100% local processing — no uploads, no analytics, no tracking
+
+## Pages
+
+- [Home](https://pdfed.usaid.dev/): Product overview, features, how it works, FAQ
+- [Compare PDF Editors](https://pdfed.usaid.dev/pages/compare.html): Honest comparison of pdfed vs Smallpdf, iLovePDF, Adobe Acrobat Online, Xodo, and PDFescape — focused on local-vs-cloud architecture
+- [Privacy Policy](https://pdfed.usaid.dev/pages/privacy.html): Detailed privacy architecture and data-handling practices
+- [Support](https://pdfed.usaid.dev/pages/support.html): Help center, FAQs, feature requests
+- [Changelog](https://pdfed.usaid.dev/pages/changelog.html): Release notes and version history
+
+## Common questions
+
+- Is pdfed free? Yes, core features are free forever.
+- Are files uploaded anywhere? No. All processing is local in the browser.
+- Which browsers are supported? Chrome, Edge, Brave, and other Chromium browsers. Firefox is coming soon.
+- Does it work on PDFs from websites? Yes, on any PDF opened in a supported browser (URL or local file).
+- Is redaction safe? Yes — redactions remove the underlying content, not just cover it visually.
